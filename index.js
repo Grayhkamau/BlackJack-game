@@ -335,7 +335,7 @@ function memoryCardShow(box){
     }
 }
 function memoryCardScore(){
-    if(card==="imgs/A.png"){
+    if(card==="./imgs/A.png"){
         if(game.you["score"] + game.cardsValue2[card][1] <= 21){
             span = document.querySelector(game.you["scoreSpan"]);
             game.you["score"] += game.cardsValue2[card][1];
