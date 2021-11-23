@@ -1,3 +1,8 @@
+let flipboxinnner = document.querySelectorAll(".flip-box-inner");
+console.log(flipboxinnner[1].children[1].children[0].attributes.src.value);
+
+
+
 let body = document.querySelector("#body");
 let choosing = document.querySelector("#choosing");
 let container2 = document.querySelector("#container-2");
