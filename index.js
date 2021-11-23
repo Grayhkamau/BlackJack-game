@@ -595,7 +595,7 @@ function rules(){
 
     let rulesList = document.createElement("ul");
     rulesList.classList.add("card-text")
-    rulesList.innerHTML = "<li>You can't pick another card if you bust</li><li>first you play(hit), then the dealer plays</li><li>you cannot deal before each both you and the dealer plays</li>"
+    rulesList.innerHTML = "<li>You can't pick another card if you bust</li><li>first you play(hit), then the dealer plays</li><li>you cannot deal before both you and the dealer plays</li>"
     rulediv.appendChild(rulesList);
     everything.appendChild(mainDiv)
 
@@ -639,7 +639,7 @@ function showHowItWorks(){
     let p = document.createElement("p");
     p.classList.add("card-text")
     p.style.width = "400px"
-    p.textContent = "Basically this is a game with 13 cards, each card having a value ie you have access to all the 13 cards, now you can only choose a card rendomly, when you choose a card, the value of that card becomes your score so far. If you choose another card, it adds the value of the current card to that of the previous one. But your cards total should not cross 21, if they do you have BUSTED. Now if you bust or if you want to go ahead with the score that you have, its time for the dealer to play. If you are done with a round and want to play another round, just press deal."
+    p.textContent = "Basically this is a game with 13 cards, each card having a value. You have access to all the 13 cards, but you can only choose one card randomly(if you choose to play LUCK) or by testing how good you can memorize(if you choose to play MEMORY). When you choose a card, the value of that card becomes your score so far. If you choose another card, it adds the value of the current card to that of the previous one. But your cards total should not cross 21, if they do you have BUSTED, so you can't pick another card. Now if you bust or if you want to go ahead with the score that you have, its time for the dealer to play. If you are done with a round and want to play another round, just press deal."
     instrusctionsDiv.appendChild(p);
     everything.appendChild(mainDiv);
 
@@ -670,7 +670,7 @@ function showHowItWorks(){
 
     let p3 = document.createElement("p");
     p3.classList.add("card-text")
-    p3.textContent = "If the dealer busts but you don't you won"
+    p3.textContent = "If the dealer busts but you don't, you won"
     logicDiv.appendChild(p3);
 
     let p4 = document.createElement("p");
@@ -680,7 +680,7 @@ function showHowItWorks(){
 
     let p5 = document.createElement("p");
     p5.classList.add("card-text")
-    p5.textContent = "If you busts but the dealer doesn't you lose"
+    p5.textContent = "If you busts but the dealer doesn't, you lose"
     logicDiv.appendChild(p5);
 
     let p6 = document.createElement("p");
