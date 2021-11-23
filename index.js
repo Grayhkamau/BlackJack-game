@@ -19,19 +19,19 @@ const game = {
     cards2:["two","three","four","five","six","seven","eight","nine","ten","K","Q","J","A"],
     cardsValue:{"2":2,"3":3,"4":4,"5":5,"6":6,"7":7,"8":8,"9":9,"10":10,"K":10,"Q":10,"J":10,"A":[1,11]},
     cardsValue2:{
-    "./imgs/2.png":2,
-    "./imgs/3.png":3,
-    "./imgs/4.png":4,
-    "./imgs/5.png":5,
-    "./imgs/6.png":6,
-    "./imgs/7.png":7,
-    "./imgs/8.png":8,
-    "./imgs/9.png":9,
-    "./imgs/10.png":10,
-    "./imgs/K.png":10,
-    "./imgs/Q.png":10,
-    "./imgs/J.png":10,
-    "./imgs/A.png":[1,11]},
+    "https://grayhkamau.github.io/BlackJack-game/imgs/2.png":2,
+    "https://grayhkamau.github.io/BlackJack-game/imgs/3.png":3,
+    "https://grayhkamau.github.io/BlackJack-game/imgs/4.png":4,
+    "https://grayhkamau.github.io/BlackJack-game/imgs/5.png":5,
+    "https://grayhkamau.github.io/BlackJack-game/imgs/6.png":6,
+    "https://grayhkamau.github.io/BlackJack-game/imgs/7.png":7,
+    "https://grayhkamau.github.io/BlackJack-game/imgs/8.png":8,
+    "https://grayhkamau.github.io/BlackJack-game/imgs/9.png":9,
+    "https://grayhkamau.github.io/BlackJack-game/imgs/10.png":10,
+    "https://grayhkamau.github.io/BlackJack-game/imgs/K.png":10,
+    "https://grayhkamau.github.io/BlackJack-game/imgs/Q.png":10,
+    "https://grayhkamau.github.io/BlackJack-game/imgs/J.png":10,
+    "https://grayhkamau.github.io/BlackJack-game/imgs/A.png":[1,11]},
     you:{"div":"#you","scoreSpan":".youScore","images":".youImages","score":0},
     dealer:{"scoreSpan":".dealerScore","images":".dealerImages","score":0,},
     wins:{"score":0},
@@ -283,8 +283,10 @@ function counting(time){
 }
 async function done(){
    alert("you have 4 seconds to memorize the cards!!!");
+   container2.style.opacity = 0.4;
+   pCount.textContent = 3;
    await counting(1000);
-   container2.style.opacity = 0.3;
+   pCount.textContent = "";
    pCount.textContent = 3;
    await counting(1000);
    pCount.textContent = "";
@@ -330,7 +332,7 @@ function memoryCardShow(box){
             box.style.transform = "rotateY(180deg)";
             img = document.createElement("img");
             card = box.children[1].children[0].attributes.src.value;
-            // console.log(card);
+            console.log(card);
             img.src = card;
             img.style.height = "100px";
             img.style.margin = "10px";
@@ -340,7 +342,7 @@ function memoryCardShow(box){
     }
 }
 function memoryCardScore(){
-    if(card==="./imgs/A.png"){
+    if(card==="https://grayhkamau.github.io/BlackJack-game/imgs/A.png"){
         if(game.you["score"] + game.cardsValue2[card][1] <= 21){
             span = document.querySelector(game.you["scoreSpan"]);
             game.you["score"] += game.cardsValue2[card][1];
@@ -383,10 +385,10 @@ function memoryCardScore(){
     if(game.dealer["score"] >= 15){
         game.standButton = true;
         winnerLogic();
-        if(riskTaker === 1){
+        if(riskTaker === 2){
             alert("you are a real risk taker aren't you?")
         }
-        else if(notRiskTaker===1){
+        else if(notRiskTaker===2){
             alert("you are not a risk taker are you?")
         }
     }
