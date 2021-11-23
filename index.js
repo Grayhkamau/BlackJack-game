@@ -9,25 +9,24 @@ let showHowItWorkss = document.querySelector("#showHowItWorks");
 let card;
 let riskTaker = 0; //used for telling if player is a risk taker
 let notRiskTaker = 0;//used for telling if player is not a risk taker
-const backImgsUrl = `file:///C:/Users/Gray/Documents/workspace/black-jack/`;
 const game = {
     cards:["2","3","4","5","6","7","8","9","10","K","Q","J","A"],
     cards2:["two","three","four","five","six","seven","eight","nine","ten","K","Q","J","A"],
     cardsValue:{"2":2,"3":3,"4":4,"5":5,"6":6,"7":7,"8":8,"9":9,"10":10,"K":10,"Q":10,"J":10,"A":[1,11]},
     cardsValue2:{
-    "file:///C:/Users/Gray/Documents/workspace/black-jack/imgs/2.png":2,
-    "file:///C:/Users/Gray/Documents/workspace/black-jack/imgs/3.png":3,
-    "file:///C:/Users/Gray/Documents/workspace/black-jack/imgs/4.png":4,
-    "file:///C:/Users/Gray/Documents/workspace/black-jack/imgs/5.png":5,
-    "file:///C:/Users/Gray/Documents/workspace/black-jack/imgs/6.png":6,
-    "file:///C:/Users/Gray/Documents/workspace/black-jack/imgs/7.png":7,
-    "file:///C:/Users/Gray/Documents/workspace/black-jack/imgs/8.png":8,
-    "file:///C:/Users/Gray/Documents/workspace/black-jack/imgs/9.png":9,
-    "file:///C:/Users/Gray/Documents/workspace/black-jack/imgs/10.png":10,
-    "file:///C:/Users/Gray/Documents/workspace/black-jack/imgs/K.png":10,
-    "file:///C:/Users/Gray/Documents/workspace/black-jack/imgs/Q.png":10,
-    "file:///C:/Users/Gray/Documents/workspace/black-jack/imgs/J.png":10,
-    "file:///C:/Users/Gray/Documents/workspace/black-jack/imgs/A.png":[1,11]},
+    "imgs/2.png":2,
+    "imgs/3.png":3,
+    "imgs/4.png":4,
+    "imgs/5.png":5,
+    "imgs/6.png":6,
+    "imgs/7.png":7,
+    "imgs/8.png":8,
+    "imgs/9.png":9,
+    "imgs/10.png":10,
+    "imgs/K.png":10,
+    "imgs/Q.png":10,
+    "imgs/J.png":10,
+    "imgs/A.png":[1,11]},
     you:{"div":"#you","scoreSpan":".youScore","images":".youImages","score":0},
     dealer:{"scoreSpan":".dealerScore","images":".dealerImages","score":0,},
     wins:{"score":0},
@@ -336,7 +335,7 @@ function memoryCardShow(box){
     }
 }
 function memoryCardScore(){
-    if(card==="file:///C:/Users/Gray/Documents/workspace/black-jack/imgs/A.png"){
+    if(card==="imgs/A.png"){
         if(game.you["score"] + game.cardsValue2[card][1] <= 21){
             span = document.querySelector(game.you["scoreSpan"]);
             game.you["score"] += game.cardsValue2[card][1];
