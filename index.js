@@ -284,7 +284,7 @@ function counting(time){
 async function done(){
    alert("you have 4 seconds to memorize the cards!!!");
    container2.style.opacity = 0.4;
-   pCount.textContent = 3;
+   pCount.textContent = 4;
    await counting(1000);
    pCount.textContent = "";
    pCount.textContent = 3;
@@ -423,19 +423,24 @@ if(notRiskTaker === 1){
  function deal(){
     if(isLuckButtonClicked===true){
         if(game.hitButton===false && game.standButton===false){
-        alert("you can only deal after both players have played")
+        alert("you can only deal after both players have played");
         }
         else if(game.hitButton===true && game.standButton===true){
         dealLogic();
         }
     }
     else if(isMemoryButtonClicked===true){
+            if(game.standButton===false){
+                alert("you can only deal after both players have played")
+            }
+            else{
             let allFlipBox = document.querySelectorAll(".flip-box-inner");
             for(let i =0; i<allFlipBox.length; i++){
                 allFlipBox[i].style.transform = "rotateZ(180deg)";
             }
             startButton();
             dealLogic();
+            }
     }        
 }
 
