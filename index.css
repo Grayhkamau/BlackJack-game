@@ -1,0 +1,154 @@
+/* luck styling */
+.everything{
+    display: flex;
+    justify-content: space-around;
+}
+
+.container{
+    margin: 0 auto;
+    width: 100%;
+    text-align: center;
+    border: 1px solid black;
+}
+.row-1{
+    border-bottom: 1px solid black;
+}
+.row-2{
+    display: flex;
+    /* flex: 1; */
+    justify-content: space-around;
+    justify-content: space-between;
+}
+.you,.dealer{
+    /* flex-wrap: wrap; */
+    height: 300px;
+    width: 50%;
+    border-left: 1px solid black;
+    text-align: center;
+}
+.you{
+    border-left: none;
+}
+#youImages,.dealerImages{
+    display: flex;
+    flex-wrap: wrap;
+    max-height:250px ;
+    justify-content: space-around;
+}
+.row-2,.row-3{
+    background-image: url("./imgs/blackjack-board2..jpg");
+}
+.row-3{
+    display: flex;
+    justify-content: space-around;
+}
+.row-3 div{
+    border:1px solid black;
+    padding: 10px;
+}
+.row-4{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+table,td{
+    border: 1px solid black;
+}
+
+
+
+
+
+
+
+/* memory styling */
+.container-2{
+    width: 75%;
+    margin: 0 auto;
+    text-align: center;
+    border: 1px solid black;
+    position: relative;
+}
+
+.pCount{
+    position: absolute;
+    bottom: 0%;
+    height: 100%;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    color: black;
+    font-size: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    }
+
+.flip-box{
+    background-color: transparent;
+    width: 100px;
+    height: 50px;
+    border: 1px solid black;
+    perspective: 1000px;
+    margin: 10px;
+}
+
+.flip-box-inner{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.flip-box-front,.flip-box-back{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+.flip-box-back{
+    color: white;
+    transform: rotateY(180deg);
+}
+
+.otherImages{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    border: 1px solid black;
+    justify-content: space-around;
+}
+
+
+/* rules,how it works and advice */
+.rulesRemove{
+    display: none;
+    transition-property:  display;
+    transition-duration: 2s;
+}
+
+.adviceContainer{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    margin: 20px;
+    color: wheat;
+}
+
+
+
+/* beggining */
+.p{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column-reverse;
+    text-align: center;
+}
+.choosing{
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+}
