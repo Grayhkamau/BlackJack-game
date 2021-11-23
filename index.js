@@ -46,7 +46,7 @@ showRule.style.display = "none";
 showHowItWorkss.style.display="none";
 
 let startQuestion = document.createElement("p");
-startQuestion.textContent = "how do you wish to start";
+startQuestion.textContent = "how do you wish to play";
 document.querySelector("#p").appendChild(startQuestion);
 let memoryButton = document.createElement("button");
 memoryButton.textContent = "Memory";
