@@ -11,7 +11,6 @@ let riskTaker = 0; //used for telling if player is a risk taker
 let notRiskTaker = 0;//used for telling if player is not a risk taker
 const game = {
     cards:["2","3","4","5","6","7","8","9","10","K","Q","J","A"],
-    cards2:["two","three","four","five","six","seven","eight","nine","ten","K","Q","J","A"],
     cardsValue:{"2":2,"3":3,"4":4,"5":5,"6":6,"7":7,"8":8,"9":9,"10":10,"K":10,"Q":10,"J":10,"A":[1,11]},
     cardsValue2:{
     "https://grayhkamau.github.io/BlackJack-game/imgs/2.png":2,
