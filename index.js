@@ -277,7 +277,7 @@ function counting(time){
 }
 async function done(){
    alert("you have 4 seconds to memorize the cards!!!");
-   container2.style.opacity = 0.4;
+   container2.style.opacity = 0.7;
    pCount.textContent = 4;
    await counting(1000);
    pCount.textContent = "";
